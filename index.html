@@ -11,13 +11,24 @@
             margin: 0;
             padding: 0;
         }
-        /* Style the navigation bar */
+        /* Style the floating navigation bar */
         .menu {
             background-color: #333333;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.712);
+            border-radius: 0 0 10px 10px;
             overflow: hidden;
         }
+        .menu ul {
+            display: flex;
+            justify-content: center;
+        }
         .menu li {
-            float: left;
+            flex: 1;
         }
         .menu li a {
             display: block;
@@ -25,28 +36,45 @@
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
+            transition: background-color 0.3s, border 0.3s;
         }
         .menu li a:hover {
             background-color: #ccb15f;
             border: 3px solid #bd470d;
+            border-radius: 5px;
         }
         /* Center the heading */
         h1 {
             text-align: center;
+            scroll-margin-block: 70px; /* Adjust for fixed menu */
         }
         /* Center the image */
         img {
             display: block;
             margin: 0 auto;
         }
+        /* Background image */
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwj7P5HgqiW3Ze2gpqZHNJVeWFwCI6YrQcHw&s');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 100px auto 20px; /* Adjust for fixed menu */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
-    <hr>
-    <img alt="Story pin image" class="hCL kVc L4E MIw" fetchpriority="auto" loading="auto" src="https://i.pinimg.com/736x/16/bf/38/16bf387c31876e72f85899b5dadd916d.jpg" height="248" width="250">
-    <h1>GEETHANJALI INSTITUTE OF SCIENCE AND TECHNOLOGY</h1>
-    <h1>CSP PROJECT (BATCH 7)</h1>
-    </hr>
     <nav class="menu">
         <ul>
             <li><a href="index.html">HOME</a></li>
@@ -55,6 +83,12 @@
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
-    <h2 align='center'> loading more....</h2>
+    <div class="content">
+    
+        <img alt="Story pin image" src="https://i.pinimg.com/736x/16/bf/38/16bf387c31876e72f85899b5dadd916d.jpg" height="248" width="250">
+        <h1 style="background: rgb(251, 247, 247);">GEETHANJALI INSTITUTE OF SCIENCE AND TECHNOLOGY</h1>
+        <h1 style="background: rgb(251, 247, 247)">CSP PROJECT (BATCH 7)</h1>
+        <h2 align='center'>Loading more....</h2>
+    </div>
 </body>
 </html>
