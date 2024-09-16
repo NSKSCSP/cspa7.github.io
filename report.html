@@ -20,6 +20,12 @@
             /* Add background color for paragraphs */
             background-color: #dbe4e4; /* Choose your desired color */
         }
+        .clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
         
     </style>
 </head>
@@ -71,5 +77,8 @@
         </ul>  
 
     </div>
+    <div class="clearfix"></div>
+<a  href="index.html" class="previous">&laquo; Previous</a>
+
 </body>
 </html>
